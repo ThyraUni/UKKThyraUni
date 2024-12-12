@@ -170,6 +170,13 @@
         document.getElementById("jam").innerText = hours;
         document.getElementById("menit").innerText = minutes;
         document.getElementById("detik").innerText = seconds;
+
+        if (distance < 0){
+            clearInterval(x);
+            document.getElementById("hitungMundur").innerText = "Maaf acara sudah selesai";
+            document.getElementById("hitungMundur").classList.remove("grid");
+            document.getElementById("hitungMundur").classList.add("bg-rose-500", "rounded-lg", "text-white", "p-2");
+        }
     }, 1000);
 </script>
 </html>
